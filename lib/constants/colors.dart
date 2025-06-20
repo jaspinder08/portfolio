@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color paleSlate = Color(0xFFccbdc5);
-  static const Color ebony = Color(0xFF0a0612);
-  static const Color studio = Color(0xFF623fbd);
-  static const Color valhalla = Color(0xFF311a5f);
-  static const Color donJuan = Color(0xFF634c51);
-  static const Color hippieBlue = Color(0xFF6998b6);
-  static const Color rouge = Color(0xFFa24379);
-  static const Color revolver = Color(0xFF271b3d);
-  static const Color cocoaBrown = Color(0xFF332222);
-  static const Color capeCod = Color(0xFF414443);
+  // Gradient Colors (Dark Theme)
+  static const gradient1 = Color(0xFF1E293B); // Dark Slate
+  static const gradient2 = Color(0xFF0F172A); // Dark Navy
+
+  // Text Colors
+  static const primaryText = Color(0xFFFFFFFF); // White
+  static const secondaryText = Color(0xFFCBD5E1); // Light Slate / Muted Gray-Blue
+
+  // Button Colors
+  static const buttonBackground = Color(0xFF3B82F6); // Blue
+  static const buttonText = Color(0xFFFFFFFF); // White
+
+  // Optional: Hover/Pressed State
+  static const buttonHover = Color(0xFF2563EB); // Slightly darker blue
 }
