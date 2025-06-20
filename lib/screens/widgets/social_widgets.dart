@@ -1,6 +1,7 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio_website/constants/colors.dart';
 
 class SocialWidgets extends StatelessWidget {
   const SocialWidgets({super.key});
@@ -15,13 +16,29 @@ class SocialWidgets extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.transparent,
             shape: BoxShape.circle,
-            border: Border.all(color: AppColors.primaryText.withOpacity(0.5)),
+            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.18))],
           ),
           child: Center(
             child: IconButton(
               onPressed: () {},
-              hoverColor: AppColors.buttonText,
-              icon: FaIcon(FontAwesomeIcons.facebook, color: AppColors.primaryText),
+              icon: FaIcon(FontAwesomeIcons.linkedinIn, color: Colors.white),
+            ),
+          ),
+        ),
+
+        SizedBox(width: 10),
+        Container(
+          height: 40,
+          width: 40,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            shape: BoxShape.circle,
+            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.18))],
+          ),
+          child: Center(
+            child: IconButton(
+              onPressed: () {},
+              icon: FaIcon(FontAwesomeIcons.github, color: Colors.white),
             ),
           ),
         ),

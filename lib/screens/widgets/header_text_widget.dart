@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_website/constants/colors.dart';
-import 'package:portfolio_website/screens/widgets/social_section.dart' show SocialSection;
+import 'package:portfolio_website/screens/widgets/download_cv_button.dart';
+import 'package:portfolio_website/screens/widgets/social_widgets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HeaderTextWidget extends StatelessWidget {
@@ -11,7 +12,7 @@ class HeaderTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: size.width * 0.07, vertical: size.height * 0.15),
+      margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -20,14 +21,14 @@ class HeaderTextWidget extends StatelessWidget {
             'I am Jaspinder',
             style: TextStyle(
               fontSize: 26,
-              color: Colors.white,
+              color: AppColors.black,
               fontWeight: FontWeight.bold,
               fontFamily: 'Poppins',
             ),
           ),
           GradientText(
-            'Flutter Developer +\nUX Designer ',
-            colors: [AppColors.primaryText, AppColors.secondaryText],
+            'Flutter Developer ',
+            colors: [AppColors.blue_600, AppColors.purple_600, AppColors.blue_800],
             style: TextStyle(
               fontSize: size.width * 0.040,
               fontFamily: 'Poppins',
@@ -38,13 +39,39 @@ class HeaderTextWidget extends StatelessWidget {
             width: size.width * 0.5,
             child: Text(
               'Experienced Application Developer with 1.5 years in Python, Flutter, and Dart, skilled in building mobile apps and backend systems using FastAPI. Proficient in scalable architecture, API integration, and Git. Focused on delivering efficient, user-centered solutions.',
-              style: TextStyle(color: AppColors.primaryText),
+              style: TextStyle(
+                color: AppColors.plainTextColor, // blue-800
+                fontSize: 18,
+              ),
             ),
           ),
-          SizedBox(width: size.width * 0.5, child: SocialSection()),
+          SizedBox(height: 10),
+          SocialLarge(size: size),
           // Container(
           //   width: ,
           // )
+        ],
+      ),
+    );
+  }
+}
+
+class SocialLarge extends StatelessWidget {
+  const SocialLarge({super.key, required this.size});
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: size.width * 0.5,
+      child: Row(
+        children: [
+          MailMeButton(),
+          SizedBox(width: 20),
+          DownloadCV(),
+          SizedBox(width: 20),
+          Expanded(child: SocialWidgets()),
         ],
       ),
     );
