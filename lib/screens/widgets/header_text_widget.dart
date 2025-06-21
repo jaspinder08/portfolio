@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio_website/constants/colors.dart';
-import 'package:portfolio_website/screens/widgets/download_cv_button.dart';
-import 'package:portfolio_website/screens/widgets/social_widgets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HeaderTextWidget extends StatelessWidget {
@@ -12,7 +10,7 @@ class HeaderTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
+      // margin: EdgeInsets.symmetric(horizontal: si),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -45,33 +43,9 @@ class HeaderTextWidget extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
-          SocialLarge(size: size),
           // Container(
           //   width: ,
           // )
-        ],
-      ),
-    );
-  }
-}
-
-class SocialLarge extends StatelessWidget {
-  const SocialLarge({super.key, required this.size});
-
-  final Size size;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: size.width * 0.5,
-      child: Row(
-        children: [
-          MailMeButton(),
-          SizedBox(width: 20),
-          DownloadCV(),
-          SizedBox(width: 20),
-          Expanded(child: SocialWidgets()),
         ],
       ),
     );
