@@ -10,7 +10,7 @@ class HeaderTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // margin: EdgeInsets.symmetric(horizontal: si),
+      margin: EdgeInsets.symmetric(horizontal: size.width * 0.07),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
